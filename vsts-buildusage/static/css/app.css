@@ -1,0 +1,70 @@
+.title-region {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+} 
+
+.content-region {
+    padding-left: 20px;
+}
+
+.title {
+    display: block;
+    margin-right: 20px;
+} 
+.actions-region {
+    display: block;
+    padding-top: 20px;
+}
+.build-filters{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px !important;
+}
+
+.page-title {
+    white-space: pre;
+    /* width: 100%; */
+    vertical-align: top;
+    padding-top: 10px;
+    font-size:18px;
+}
+
+ul {
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.total-time {
+    font-weight: bold !important;
+    margin-bottom: 10px !important;
+}
+
+.error-msg {
+    color: red !important;
+    margin-bottom: 10px !important;
+}
+
+.link {
+     cursor:pointer;
+     color:blue;
+     text-decoration:underline;
+}
+
+.buildhub-splitter {
+    height: calc(100vh) !important;  
+}
+
+.tree-view {
+    height: 100%;
+    overflow: auto;
+}
+
+.tree-view ul {
+    border-bottom: none;
+}
+
+.grids {
+    height: 80vh;
+    overflow: auto;
+}

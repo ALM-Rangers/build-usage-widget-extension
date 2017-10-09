@@ -1,0 +1,158 @@
+{
+  "manifestVersion": 1,
+  "id": "vsts-buildusage",
+  "version": "0.10.270",
+  "name": "Build Usage",
+  "description": "See how many build minutes are being used by users, build definitions, team projects and more.",
+  "publisher": "igorrosamacedo",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "categories": [
+    "Build and release"
+  ],
+  "tags": [
+    "build",
+    "reports",
+    "analytics"
+  ],
+  "galleryFlags": [
+    "Preview"
+  ],
+  "scopes": [
+    "vso.build"
+  ],
+  "demands": [
+    "api-version/3.0"
+  ],
+  "content": {
+    "details": {
+      "path": "overview.md"
+    },
+    "license": {
+      "path": "mp_terms.md"
+    }
+  },
+  "links": {
+    "home": {
+      "uri": "http://blog.andredias.net"
+    },
+    "support": {
+      "uri": "http://aka.ms/vsarcontact"
+    }
+  },
+  "branding": {
+    "color": "rgb(51, 65, 133)",
+    "theme": "dark"
+  },
+
+  "icons": {
+    "default": "static/images/logo.png"
+  },
+
+  "files": [
+    {
+      "path": "dist",
+      "addressable": true
+    },
+    {
+      "path": "static/build-usage-widget.html",
+      "addressable": true
+    },
+    {
+      "path": "static/build-usage-hub.html",
+      "addressable": true
+    },
+    {
+      "path": "static/build-usage-collection-admin-hub.html",
+      "addressable": true
+    },
+    {
+      "path": "static/images",
+      "addressable": true
+    },
+    {
+      "path": "static/css",
+      "addressable": true
+    },
+    {
+      "path": "overview.md",
+      "addressable": true
+    },
+    {
+      "path": "ThirdPartyNotices.txt",
+      "addressable": true
+    },
+    {
+      "path": "node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    },
+    {
+      "path": "node_modules/applicationinsights-js/dist",
+      "addressable": true,
+      "packagePath": "lib"
+    },
+    {
+      "path": "node_modules/underscore",
+      "addressable": true,
+      "packagePath": "lib"
+    },
+    {
+      "path": "node_modules/office-ui-fabric-react/dist/css",
+      "addressable": true,
+      "packagePath": "static/css"
+    }
+  ],
+
+  "contributions": [
+    {
+      "id": "Widget",
+      "type": "ms.vss-dashboards-web.widget",
+      "targets": [
+        "ms.vss-dashboards-web.widget-catalog"
+      ],
+      "properties": {
+        "name": "Build Usage",
+        "description": "See the build usage for your builds in this Team Project",
+        "previewImageUrl": "static/images/preview.png",
+        "uri": "static/build-usage-widget.html",
+        "supportedSizes": [
+          {
+            "rowSpan": 1,
+            "columnSpan": 1
+          }
+        ],
+        "supportedScopes": [ "project_team" ]
+      }
+    },
+    {
+      "id": "BuildHub",
+      "type": "ms.vss-web.hub",
+      "targets": [
+        "ms.vss-build-web.build-hub-group",
+        "ms.vss-build-web.build-release-hub-group"
+      ],
+      "properties": {
+        "name": "Build Usage",
+        "order": 99,
+        "uri": "static/build-usage-hub.html"
+      }
+    },
+    {
+      "id": "BuildCollectionAdminHubGroup",
+      "type": "ms.vss-web.hub",
+      "description": "Adds a hub to the Collection Admin hub group",
+      "targets": [
+        "ms.vss-web.collection-admin-hub-group"
+      ],
+      "properties": {
+        "name": "Build Usage",
+        "order": 100,
+        "uri": "static/build-usage-collection-admin-hub.html"
+      }
+    }
+  ]
+}
