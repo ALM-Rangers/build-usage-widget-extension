@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../lib/VSS.SDK.min.js" type="text/javascript"></script>
+    <script src="../lib/ai.0.js"></script>
+
+    <script type="text/javascript">
+        VSS.init(
+        {
+            explicitNotifyLoaded: true,
+            setupModuleLoader: true,
+            usePlatformScripts: true,
+            usePlatformStyles: true
+        });
+
+        VSS.ready(function () {
+            require(["dist/app"], function (app) { });
+        });
+
+    </script>
+
+</head>
+<body>
+    <div class="widget clickable" style="background-color:#018575; display:none">
+        <a id="linkBuildHub" target="_top">
+            <h2 class="title" style="color:#ffffff">Build Usage</h2>
+            <div class="big-count" id="buildWidget" style="color:#ffffff"></div>
+            <p id="info" style="color:#ffffff"></p>
+        </a>
+    </div>
+</body>
+</html>

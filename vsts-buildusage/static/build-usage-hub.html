@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Build Usage Hub</title>
+    <script src="../lib/VSS.SDK.min.js"></script>
+    <script src="../lib/underscore-min.js"></script>
+    <script src="../lib/ai.0.js"></script>
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/fabric.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        VSS.init(
+            {
+                explicitNotifyLoaded: true,
+                setupModuleLoader: true,
+                usePlatformScripts: true,
+                usePlatformStyles: true
+            });
+
+        VSS.ready(function () {
+            require(["dist/buildHub"], function (app) {
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="hub-container">
+        
+    </div>
+</body>
+
+</html>

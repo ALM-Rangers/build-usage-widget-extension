@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Build Usage Group Hub</title>
+    <script src="../lib/VSS.SDK.min.js"></script>
+    <script src="../lib/underscore-min.js"></script>
+    <script src="../lib/ai.0.js"></script>
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/fabric.css" rel="stylesheet" />
+    <script type="text/javascript">
+        VSS.init(
+        {
+            explicitNotifyLoaded: true,
+            setupModuleLoader: true,
+            usePlatformScripts: true,
+            usePlatformStyles: true
+        });
+        VSS.ready(function () {
+            require(["dist/buildCollectionAdminHub"], function (app) {
+            });
+        });
+    </script>
+</head>
+<body style="padding-left: 10px;">
+    <div class="buildhub-splitter horizontal splitter" >
+        <div class="leftPane">
+            <h3 class="ms-font-l page-title">Team Projects</h3>
+            <div id="grid-container-teamprojects" class="tree-view"></div>
+        </div>
+        <div class="handleBar"></div>
+        <div class="rightPane">         
+            <div id="build-usage-container"></div>            
+        </div>
+    </div>
+</body>
+</html>
